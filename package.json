@@ -1,0 +1,11 @@
+{
+  "name": "itt",
+  "version": "1.0.0",
+  "description": "Interface test tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "Gary",
+  "license": "MIT"
+}

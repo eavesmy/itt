@@ -1,13 +1,12 @@
 const http = require("http");
-
+const https = require("https");
 
 module.exports = function(options) {
-		
-		console.log(options)
-
+	
     return new Promise((re, rj) => {
 
-        const req = http.request(options, res => {
+          // const req = (options.protocol === "http" ? http : https).request(options, res => {
+           const req = http.request(options, res => {
 
             let chunk = "";
 
@@ -18,7 +17,7 @@ module.exports = function(options) {
             res.on("end", () => {
                 res.Data = chunk;
                 options.cb(res);
-								re()
+				re()
             });
 
         })
@@ -26,8 +25,8 @@ module.exports = function(options) {
         req.on("timeout", Error_Timeout);
         req.on("error", Error_Connect);
 
-				req.write(options.body || "");
-				req.end();
+		req.write(options.body || "");
+		req.end();
     });
 }
 

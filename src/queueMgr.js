@@ -7,6 +7,7 @@ const RequestModel = {
     path: "/",
     headers: {},
     body: "",
+	protocol:"http:",
     cb: Promise.resolve,
 }
 
@@ -57,5 +58,5 @@ Queue.prototype.run = function(gen) {
     if (!option) return console.log("Queue work done.");
 
     Request(option)
-        .then(() => run);
+        .then(() => this.run);
 }

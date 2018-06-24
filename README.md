@@ -1,7 +1,7 @@
 # itt
 
 ## Install
-``` npm install --save-dev itt
+```npm install --save-dev eitt```
 
 ## Usage
 See test.js

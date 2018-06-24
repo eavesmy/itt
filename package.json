@@ -1,5 +1,5 @@
 {
-  "name": "itt",
+  "name": "eitt",
   "version": "1.0.0",
   "description": "Interface test tool",
   "main": "index.js",
@@ -7,5 +7,16 @@
     "test": "npm test"
   },
   "author": "Gary",
-  "license": "MIT"
+  "license": "MIT",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zdy23216340/itt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zdy23216340/itt/issues"
+  },
+  "homepage": "https://github.com/zdy23216340/itt#readme"
 }

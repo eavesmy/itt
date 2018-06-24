@@ -27,10 +27,9 @@ let list = [
 
 /*
 queue.Run([{
-    hostname: "app.wanmeistyle.com",
-	path:"/api/box/summry",
+    hostname: "",
+	path:"",
 	headers:{
-		 // "x-access-token":"07a8d7b2b786939829569b0bf8ee0c8b7f2e3b3c2c49e03979c068d81cc91a4a0a104135e7f741eac44e1366700b871d"
 	},
     cb: res => {
 		console.log(res.Data)
@@ -47,8 +46,6 @@ queue.Run([
 				"Content-Type":"application/json"
 			},
 			body:JSON.stringify({
-				Account:"eaves",
-				Password:Md5("23216340eavesDL")
 			}),
 			cb:res=>{
 				console.log(res.Data)

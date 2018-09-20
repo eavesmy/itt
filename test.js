@@ -30,6 +30,18 @@ let list = [
 
 /*
 queue.Run([{
+	hostname: "bj.bitkeep.com",
+	path:"/coin/index",
+	method:"POST",
+	headers:{
+		"Content-Type": "application/json",
+	},
+	cb: res => {
+		console.error(res.Data)
+	}
+}])
+
+queue.Run([{
     hostname: "",
 	path:"",
 	headers:{

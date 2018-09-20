@@ -19,5 +19,6 @@ var Req = function(path,body,method){
 }
 
 test.Queue.Run([
-    new Req("/chain/publish?name=fuck&intro=我是你爸爸&count=15&price=0.11",{},"get")
+     // new Req("/chain/publish?name=fuck&intro=我是你爸爸&count=15&price=0.11",{},"get")
+	 new Req("/chain/transfer?to=0xFFea26119C2cF4d123F2E5AD1C070798BA1352C5&amount=0",{},"get")
 ])

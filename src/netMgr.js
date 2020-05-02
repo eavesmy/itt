@@ -2,9 +2,7 @@ const http = require("http");
 const https = require("https");
 
 module.exports = function(options) {
-	
     return new Promise((re, rj) => {
-
           // const req = (options.protocol === "http" ? http : https).request(options, res => {
            const req = http.request(options, res => {
 
@@ -16,6 +14,9 @@ module.exports = function(options) {
 
             res.on("end", () => {
                 res.Data = chunk;
+                if(res.headers["content-type"].indexOf("application/json") > -1) {
+                    res.Data = JSON.parse(res.Data);
+                }
                 options.cb(res);
 				re()
             });
